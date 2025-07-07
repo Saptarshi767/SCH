@@ -3,6 +3,10 @@ name: Daily Auto Commit
 on:
   schedule:
     - cron: '0 4 * * *'  # 🔁 Every day at 9:30 AM IST
+    - cron: '30 6 * * *'  # 12:00 PM IST
+    - cron: '0 9 * * *'   # 2:30 PM IST
+    - cron: '30 11 * * *' # 5:00 PM IST
+    - cron: '0 14 * * *'  # 8:00 PM IST
   workflow_dispatch:       # ✅ Manual trigger option
 
 jobs:
