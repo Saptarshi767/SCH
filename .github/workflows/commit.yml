@@ -2,8 +2,8 @@ name: Daily Auto Commit
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # 9:30 AM IST
-  workflow_dispatch:
+    - cron: '0 4 * * *'  # 🔁 Every day at 9:30 AM IST
+  workflow_dispatch:       # ✅ Manual trigger option
 
 jobs:
   commit:
@@ -28,7 +28,7 @@ jobs:
           git add .
 
           if git diff --cached --quiet; then
-            echo "No changes to commit"
+            echo "✅ No changes to commit"
           else
             git commit -m "📅 Daily commit by Saptarshi"
             git push
