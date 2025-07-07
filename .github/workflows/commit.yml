@@ -1,0 +1,30 @@
+name: Daily Auto Commit
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # Every day at 9:30 AM IST
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Run commit script
+        run: python commit.py
+
+      - name: Git Commit & Push
+        run: |
+          git config user.name "Saptarshi Mahapatra"
+          git config user.email "your-email@example.com"
+          git add .
+          git commit -m "📅 Daily commit by Saptarshi"
+          git push
