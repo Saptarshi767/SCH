@@ -1,4 +1,4 @@
-# 🧠 Saptarshi's Daily Auto Commit Log
+# 🧠 Saptarshi's Daily Commit Log
 
 Welcome to my daily streak bot! This repo is powered by GitHub Actions to:
 
